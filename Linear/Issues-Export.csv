@@ -1,0 +1,279 @@
+"ID","Team","Title","Description","Status","Estimate","Priority","Project ID","Project","Creator","Assignee","Labels","Cycle Number","Cycle Name","Cycle Start","Cycle End","Created","Updated","Started","Triaged","Completed","Canceled","Archived","Due Date","Parent issue","Initiatives","Project Milestone ID","Project Milestone","SLA Status","UUID","Time in status (minutes)","Related to","Blocked by","Duplicate of"
+"FAR-11","Fares Alahmad","Amazon Haul Navigation Sections Display No Content","### **Description**
+
+When opening the navigation sections within Amazon Haul, the section headers load successfully, but no products or other content are displayed underneath them.
+
+### **Severity:** Medium
+
+### **Steps to Reproduce**
+
+1. Open the Amazon app without being logged in.
+2. Go to the Home section.
+3. Navigate to Amazon Haul.
+4. Open each of the four available navigation options.
+5. Observe the content displayed under each section header.
+
+### **Actual Result**
+
+Each section loads its header, but no content is displayed underneath it.
+
+### **Expected Result**
+
+Each selected Amazon Haul section should display the relevant products or content underneath the header.
+
+### Impact
+
+Users  are unable to view the products or content associated with the selected Amazon Haul sections, which prevents them from browsing those sections as intended.
+
+### **Environment**
+
+* Device: iPhone 17 Pro
+* OS: iOS 26.6.2
+* Application: Amazon app
+* Region: Australia
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (6).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/289dc660-a7a3-4156-9336-1ecd05b6dad8/c1b8a48c-9a16-4d09-bcc1-e8c51c487f5c)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (8).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/87615383-2cf5-40a1-8964-f9d4078944b7/d3995af8-e446-4d59-8579-ec95c7f5fcea)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (7).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/ec23b7ff-82fe-4992-9add-d2a96ebad287/d6031ca1-ae27-4964-b261-3a5cc75c7380)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, functional, Mobile, Ui",,,,,"2026-09-11T11:14:17.450Z","2026-09-24T02:00:37.688Z",,,,,,,,"",,,,"bf49f53d-bf24-46c3-8220-9b1430a80132",18240,"","",
+"FAR-10","Fares Alahmad","Settings Section Not Functional in Japanese Amazon App","### **Description**
+
+When opening the Settings section in the Japanese Amazon app, the section does not expand or navigate to the Settings page referenced in the disclaimer.
+
+### **Severity:** Medium
+
+### **Steps to Reproduce**
+
+1. Open the Amazon app using the Japanese region/version.
+2. Navigate to the section containing Settings.
+3. Tap the Settings section.
+4. Observe the arrow.
+5. Observe whether the Settings section expands or navigates to the Settings page referenced in the disclaimer.
+
+### **Actual Result**
+
+The arrow changes direction, but no settings appear, and the section does not navigate to the Settings page mentioned in the disclaimer.
+
+### **Expected Result**
+
+The Settings section should either expand correctly or provide a working way to access the Settings page.
+
+### Impact
+
+Users cannot access the Settings information or page through the Settings section, which makes the section appear non-functional.
+
+### **Environment**
+
+* Device: iPhone 17 Pro
+* OS: iOS 26.6.2
+* Application: Japanese Amazon app
+* Region: Japan / Japanese Amazon
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (5).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/c1d1dbad-0039-4d6f-bc2f-17e973f3df56/7d48ac87-1a42-4edb-93bc-f611176f1bbd)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (3).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/72d9317a-a3f5-4728-925b-90d47938c90c/c1a2d10e-2f76-48f5-b353-24bcd13ae385)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (4).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/4bca2743-51aa-4a78-a9e6-4ee282bf721a/5418361d-f5d5-41c9-8f19-05589527a0f5)
+
+![WhatsApp Image 2026-09-11 at 1.41.35 PM (1).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/5ebb26a5-843e-4752-9bcd-667769708108/7f7a9e0c-0deb-4b25-bcd6-f8d3c3bb30e8)
+
+![WhatsApp Image 2026-09-11 at 1.41.35 PM.jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/74ca1ea2-6d02-40ff-a205-175b0d922344/951b6d40-0eea-43fa-b9b9-c63f3f853744)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, Mobile, Ui",,,,,"2026-09-11T11:14:07.964Z","2026-09-24T02:00:30.415Z",,,,,,,,"",,,,"6eb30460-1c5c-4ad9-9b13-acaa8c5a5ee4",18240,"","",
+"FAR-9","Fares Alahmad","Existing Account Treated as New User","### **Description**
+
+When attempting to sign in with a phone number associated with an existing Amazon account, the application redirects the user to the new account creation flow instead of continuing with the existing account sign-in flow.
+
+### **Severity:** High
+
+### **Steps to Reproduce**
+
+1. Open the Amazon app.
+2. Go to the sign-in page.
+3. Enter a phone number associated with an existing Amazon account.
+4. Continue with the sign-in process.
+5. Observe the page you are redirected to.
+6. Continue through the account creation flow using the same phone number.
+7. Observe the error message.
+
+### **Actual Result**
+
+Instead of recognizing the existing account, the application treats the user as a new user and redirects to the account creation flow.
+
+When proceeding with account creation, the application displays an error stating that unusual activity has been detected and the account cannot be created.
+
+### **Expected Result**
+
+The application should recognize that the phone number is already associated with an existing account and direct the user to the appropriate sign-in flow.
+
+### Impact
+
+Users with existing Amazon accounts may be unable to sign in using their registered phone number. The incorrect redirection to account creation can cause confusion and may prevent affected users from accessing their existing account through the expected sign-in flow
+
+### **Environment**
+
+* Device: iPhone 17 Pro
+* OS: iOS 26.6.2
+* Application: Amazon app
+* Region: Egypt
+
+![alreadyRegistered.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/17b92cdf-5600-409c-b3e1-4784408e0d1b/14e28101-4c63-427c-b3ec-643cdfc143c9)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM.jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/e048ce4e-5d28-4906-9813-01ab4dedffef/157b2c32-64f4-443a-a070-d7d0629199a6)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (1).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/97bcbda5-80e6-417f-ad74-06c18fcf6e00/d904733d-82b3-4c3f-b976-c9b07e271f5e)
+
+![WhatsApp Image 2026-09-11 at 1.27.31 AM (2).jpeg](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/cd9fd3ab-c6f5-401c-83ba-4ca62e9d8e56/2d58222e-ffc2-4b7d-8a62-521275ba2c26)","Backlog",,"High","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, functional, Mobile",,,,,"2026-09-11T11:13:50.906Z","2026-09-24T02:00:43.936Z",,,,,,,,"",,,,"7a3b895f-2a4b-4bb6-ab0c-2b99945274d6",18240,"","",
+"FAR-8","Fares Alahmad","Special Characters Accepted in Address Fields","### **Description**
+
+The checkout address form accepts the input `#@$` in the name, street name, and building name fields and allows the user to continue without displaying a validation message.
+
+### **Severity:** Medium
+
+### **Steps to Reproduce**
+
+1. Open Amazon.
+2. Add a product to the cart.
+3. Proceed to checkout.
+4. Navigate to the address information section.
+5. Enter `#@$` in the name field.
+6. Enter `#@$` in the street name field.
+7. Enter `#@$` in the building name field.
+8. Continue to the next step.
+9. Observe the result.
+
+### **Actual Result**
+
+The website accepts the input and proceeds to the next step without displaying a validation error.
+
+### **Expected Result**
+
+The website should validate the entered address fields and display an appropriate validation message if the input is not accepted.
+
+### Impact
+
+Users can submit potentially invalid address information without receiving feedback from the form, which may result in incorrect or unusable address details being entered during checkout.
+
+### Environment
+
+* Platform: Web
+* Browser: Google Chrome
+* OS: Windows 11
+* Website: Amazon
+
+![invalid adress info.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/aad9f541-cadf-4c23-8d13-da9878fe73fd/d78dbac6-4cb4-4512-874c-3e034cbae1bf)
+
+![Screenshot 2026-09-11 143128.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/63f685e0-7a81-4567-a312-e5e9a9701c11/b75b69d0-1fc0-4a3b-9b5b-b8981b6507cc)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Feature, functional, web",,,,,"2026-09-11T11:13:34.188Z","2026-09-24T02:00:22.905Z",,,,,,,,"",,,,"3442d41e-d9d9-47d8-af4c-d226467f80ca",18241,"","",
+"FAR-7","Fares Alahmad","OTP Field Missing Until Page Refresh","### **Description :**
+
+After submitting a valid phone number, the OTP page loads without displaying an input field for entering the OTP. The input field becomes visible only after refreshing the page.
+
+### **Severity:** high
+
+### **Steps to Reproduce**
+
+1. Open Amazon using Google Chrome.
+2. Go to the sign-in page.
+3. Enter a valid phone number.
+4. Continue with the sign-in process.
+5. Wait for the OTP page to load.
+6. Observe the OTP page and check for the OTP input field.
+7. Refresh the page.
+8. Observe the OTP page again.
+9. Verify that the OTP input field appears after the refresh.
+
+### **Actual Result**
+
+After the OTP is sent, the OTP page loads without an input field for entering the OTP. The field becomes visible only after refreshing the page.
+
+### **Expected Result**
+
+The OTP page should display the input field immediately after loading so the user can enter the OTP and continue with the sign-in process.
+
+### Impact
+
+Users may be unable to complete the sign-in process because the OTP cannot be entered until the page is manually refreshed.
+
+### Environment
+
+* Platform: Web
+* Browser: Google Chrome
+* OS: Windows 11
+* Website: Amazon
+
+![otp.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/5a863dad-5d5f-42ae-b32e-dff15ac86e52/df3f75a9-704f-4330-94d5-16f484b0d6a5)
+
+![refresh.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/29a15ae0-51b8-4b37-91f2-3dab220707d8/4f1dd848-106c-42a6-b858-27ed66ae4a40)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, Ui, web",,,,,"2026-09-11T11:13:15.450Z","2026-09-24T02:00:14.280Z",,,,,,,,"",,,,"c1cf52be-02df-4be2-bda7-aef8e5d02dce",18241,"","",
+"FAR-6","Fares Alahmad","Invalid Email Format Accepted","### **Description**
+
+The registration form accepts the email values `ff@com.hotmail` and `ff@com.shotmail` and proceeds with the registration flow without displaying an email format validation message.
+
+### **Severity:** Medium
+
+### **Steps to Reproduce:**
+
+1. Open Amazon.
+2. Go to the account registration/sign-up page.
+3. Enter the required registration information.
+4. Enter `ff@com.hotmail` in the email field.
+5. Continue with the registration process and observe the result.
+6. Repeat the test using `ff@com.shotmail` as the email value.
+7. Observe the result.
+
+### **Actual Result**
+
+The registration form accepts both `ff@com.hotmail` and `ff@com.shotmail` and proceeds to the OTP verification step without displaying an email format validation message.
+
+### **Expected Result**
+
+The registration form should validate the email format according to the application's accepted email rules and display an appropriate validation message when the entered value does not meet those rules.
+
+### Impact
+
+Users may be allowed to proceed with email addresses that do not meet the application's expected email format, potentially resulting in unsuccessful or confusing registration attempts.
+
+### Environment
+
+* Platform: Web
+* Browser: Google Chrome
+* OS: Windows 11
+* Website: Amazon
+
+![accapted invalid email.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/c63c5dc4-f1bc-4fe6-8515-5f94d77084c0/cb7ddbe5-7405-4b1b-9e2b-4542bd6bcf8a)
+
+![anotherExampleForBug1.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/fa6fd9bf-8fe6-405c-b71b-05e13dc0edba/9f7132e8-c2c0-45aa-a520-a37444fed23d)
+
+![invalidemailcom.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/26fc3c1d-4bc7-45bb-abc3-dbe559c0f010/bf59db88-a301-49fd-9f59-68e2ede639fe)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, functional, observer, web",,,,,"2026-09-11T11:12:59.262Z","2026-09-24T02:00:07.103Z",,,,,,,,"",,,,"2069d150-8232-46bd-9c12-3b41d9e9f474",18241,"","",
+"FAR-5","Fares Alahmad","Invalid Phone Number Accepted","### **Description**
+
+The registration form accepts a phone number containing a `.` character at the end and proceeds with the registration flow without displaying a validation message.
+
+### **Severity**: Medium
+
+### Steps to Reproduce
+
+1. Open the Amazon registration page.
+2. Enter the required registration information.
+3. Enter a phone number with a `.` character at the end instead of a digit.
+4. Continue with the registration process.
+5. Observe the result.
+
+### Actual Result
+
+The website accepts the phone number containing the `.` character and proceeds to send an OTP to the entered number without displaying a validation message.
+
+### Expected Result
+
+The phone number field should validate the entered value and display an appropriate validation message when the value contains an unsupported character.
+
+### Impact
+
+Users may be able to proceed with a phone number that does not meet the application's expected phone number format, potentially resulting in unsuccessful or confusing registration attempts.
+
+### Environment
+
+* Platform: Web
+* Browser: Google Chrome
+* OS: Windows 11
+* Website: Amazon
+
+  ![Screenshot 2026-09-10 212947.png](https://uploads.linear.app/e0766ad6-a777-46f0-b13a-64cf7a57b31c/7dd579ff-7fee-46c6-b656-ecba5de7b4d2/663c60f2-ec71-4bdf-a156-9bec4fc58891)","Backlog",,"Medium","1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","fares.f.al@hotmail.com",,"Bug, functional, observer, web",,,,,"2026-09-11T11:12:32.891Z","2026-09-24T02:00:00.512Z",,,,,,,,"",,,,"7442bf5d-7a9c-4a2c-9d3e-c8b9005b2b74",18242,"","",

@@ -1,0 +1,6 @@
+"ID","Name","URL","Summary","Description","Status","Priority","Milestones","Creator","Lead","Members","Start Date (Start)","Start Date (End)","Target Date (Start)","Target Date (End)","Created At","Started At","Updated At","Completed At","Canceled At","Archived At","Teams","Initiatives","Health","Latest Update","Latest Update Date","Customer Count","Customer Revenue","Blocking","Blocked by","Labels","Initiative IDs","Identifier"
+"1df89ee9-b481-4ea3-84fe-9dd720be8683","Amazon QA Testing – Web/mobileApp","https://linear.app/fares-alahmad/project/amazon-qa-testing-webmobileapp-d64886715807/overview","","This project covers testing of key user journeys :
+
+including registration, login/authentication, navigation, product browsing, checkout, input validation, and mobile-specific behavior.
+
+The goal is to identify ,reproduce, document, and prioritize meaningful defects with clear reproduction steps, expected and actual results, severity/priority, environment details, and supporting evidence.","Backlog","No priority","","Fares Alahmad","Fares Alahmad","Fares Alahmad",,,,,"2026-09-11T11:10:21.546Z",,"2026-09-17T07:18:38.609Z",,,,"Fares Alahmad","","No updates","",,,,"","","Web, Amazon, Exploratory Testing, Manual Testing, QA","","P-FAR-1"
