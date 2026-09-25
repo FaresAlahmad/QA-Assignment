@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository contains my submission for the QA Technical Assignment, covering **manual testing, UI test automation, and API testing**.
+This repository contains my submission for the QA Technical Assignment, covering **manual testing, UI test automation, API testing, and an optional k6 performance-testing bonus**.
 
 ### Tools and Technologies
 
@@ -14,6 +14,7 @@ This repository contains my submission for the QA Technical Assignment, covering
 | Manual Testing Applications | Amazon website and Amazon Japanese mobile application |
 | UI Automation Application   | SauceDemo / Swag Labs                                 |
 | API Under Test              | DummyJSON E-commerce REST API                         |
+| Performance Testing (Bonus) | k6                                                     |
 
 The assignment focuses on practical QA activities including test design, functional and negative testing, exploratory testing, UI automation, API validation, defect reporting, test evidence, and professional documentation.
 
@@ -55,6 +56,8 @@ The `Linear` folder contains the manual testing documentation, reported issues, 
 The `qa-automation-assignment` folder contains the Playwright project, including the automated tests and reusable login helper.
 
 The `Task-3-Postman` folder contains the Postman collection, environment, API test failure report, and final test result evidence.
+
+The `Task-4-k6-Bonus` folder contains the k6 performance test script, the performance test report, and an exported execution summary.
 
 Generated dependencies such as `node_modules` are not required for the repository because they can be recreated using `npm install`.
 
@@ -534,13 +537,91 @@ Testing was limited to the scenarios and endpoints selected for this assignment.
 
 ---
 
+# Task 4 – Basic Performance Testing (Optional Bonus)
+
+## Tool
+
+**k6 v2.2.0**
+
+## Objective
+
+A low-load performance smoke test was created for the DummyJSON e-commerce API. The goal was to demonstrate basic k6 usage, validate the endpoint response, and measure response times under a deliberately small load. This was not a stress test or capacity test.
+
+## Endpoint Tested
+
+`GET https://dummyjson.com/products?limit=10`
+
+## Test Configuration
+
+| Setting | Value |
+|---|---|
+| Virtual users (VUs) | 2 |
+| Duration | 30 seconds |
+| Request | `GET /products?limit=10` |
+| Response-time threshold | p95 below 2,000 ms |
+| HTTP request failure-rate threshold | Below 1% |
+
+## Checks
+
+Each response was checked for:
+
+- HTTP status code is 200.
+- Response time is below 2 seconds.
+- Response contains a non-empty `products` array.
+
+## Recorded Results
+
+The recorded run produced the following results:
+
+| Metric | Result |
+|---|---:|
+| HTTP requests | 52 |
+| Checks passed | 156 / 156 |
+| Checks failed | 0 |
+| Average response time | 162.57 ms |
+| Median response time | 146.47 ms |
+| 95th-percentile response time (p95) | 159.79 ms |
+| Maximum response time | 595.17 ms |
+| HTTP request failure rate | 0% |
+| Requests per second | 1.71 |
+| Thresholds | Both passed |
+
+## Files and Execution
+
+The k6 files are located in `Task-4-k6-Bonus/`:
+
+- `performance-test.js` — k6 test script.
+- `performance-test-report.md` — test configuration, thresholds, results, observations, and limitations.
+- `summary.json` — exported summary from the recorded execution.
+
+To run the test from the bonus folder:
+
+```bash
+k6 run performance-test.js
+```
+
+To run the test and export a summary:
+
+```bash
+k6 run performance-test.js --summary-export=summary.json
+```
+
+## Observations and Limitations
+
+The endpoint met the response-time and HTTP failure-rate thresholds defined for this low-load run. All checks passed. These results describe only this endpoint under the stated configuration; they do not establish how the API would perform under heavy traffic.
+
+The test used 2 virtual users for 30 seconds and covered only the products-list endpoint. Results may vary between runs and with network conditions. A real performance-testing project would use agreed performance objectives, a baseline, representative endpoints and user journeys, gradually increased load in a controlled environment, and server-side monitoring.
+
+---
+
 # Final Results Summary
 
-| Task   | Tool                    | Scope            | Final Result                                   |
-| ------ | ----------------------- | ---------------- | ---------------------------------------------- |
-| Task 1 | Linear                  | Manual testing   | Completed                                      |
-| Task 2 | Playwright + TypeScript | UI automation    | **18 tests executed successfully**             |
-| Task 3 | Postman                 | REST API testing | **92 assertions passed / 3 assertions failed** |
+| Task   | Tool                    | Scope                  | Final Result                                   |
+| ------ | ----------------------- | ---------------------- | ---------------------------------------------- |
+| Task 1 | Linear                  | Manual testing         | Completed                                      |
+| Task 2 | Playwright + TypeScript | UI automation          | **18 tests executed successfully**             |
+| Task 3 | Postman                 | REST API testing       | **92 assertions passed / 3 assertions failed** |
+| Bonus  | k6                      | Performance smoke test | **All checks and thresholds passed**           |
 
 The three Task 3 failures are documented in the `API Test Failure Report.md` file.
 
@@ -580,6 +661,7 @@ I used AI primarily for:
 * Reviewing test assertions and identifying areas where tests could be strengthened.
 * Getting guidance on organizing the automation project and reusable helper functions.
 * Reviewing and improving the README and test documentation.
+* Getting guidance on creating and documenting the basic k6 performance test.
 * Reviewing the explanation and documentation of API test results and failures.
 * Improving the clarity and structure of the final submission and email communication.
 
@@ -615,6 +697,8 @@ Before submitting the assignment, the following were reviewed:
 * [x] Task 3 Postman environment included
 * [x] Task 3 final test results included
 * [x] Task 3 failures investigated and documented
+* [x] Optional k6 performance test script included
+* [x] k6 execution summary and performance report included
 * [x] API validation observations documented
 * [x] Known DummyJSON limitations documented
 * [x] One main README provided for the complete assignment
@@ -626,7 +710,7 @@ Before submitting the assignment, the following were reviewed:
 
 # Conclusion
 
-This repository contains the complete QA Technical Assignment submission, including manual testing documentation, UI automation tests, API tests, supporting evidence, and final test results.
+This repository contains the complete QA Technical Assignment submission, including manual testing documentation, UI automation tests, API tests, the optional k6 performance-testing bonus, supporting evidence, and final test results.
 
 The submission demonstrates practical QA skills in:
 
@@ -643,4 +727,5 @@ The submission demonstrates practical QA skills in:
 * Test evidence
 * Documentation
 * Test result analysis
+* Basic performance testing with k6
 * Professional QA reporting
